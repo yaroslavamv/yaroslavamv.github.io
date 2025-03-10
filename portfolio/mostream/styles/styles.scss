@@ -1,0 +1,11 @@
+@use "variables";
+@use "text";
+@use "common";
+@use "blocks/header";
+@use "blocks/hero";
+@use "blocks/main";
+@use "blocks/movie-categories";
+@use "blocks/news";
+@use "blocks/subscribe";
+@use "blocks/footer";
+@import url("normalize.css");

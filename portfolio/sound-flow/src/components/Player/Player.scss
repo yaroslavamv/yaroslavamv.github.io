@@ -1,0 +1,534 @@
+@use "../../styles/media.scss";
+
+
+.player {
+	max-width: 930px;
+	display: flex;
+	flex-direction: row;
+	gap: 54px;
+	padding-block: 54px 72px;
+	margin-inline: auto;
+
+	&__cover {
+		flex: none;
+		width: 384px;
+		aspect-ratio: 1 / 1;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		border-radius: 24px;
+		transition: background-image;
+		transition-duration: var(--transition-duration);
+		box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, .15);
+	}
+
+	&__ui {
+		width: 0;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+
+		&-title {
+			display: flex;
+			flex-direction: row;
+			justify-content: end;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 36px 28px;
+
+			&-name {
+				width: 100%;
+
+				&-song {
+					margin-bottom: 4px;
+				}
+			}
+		}
+
+		&-control {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: end;
+
+			&-buttons {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				padding-inline: 24px;
+			}
+		}
+	}
+
+
+	@media (max-width: 1100px) {
+		width: 78%;
+		align-items: center;
+
+		&__cover {
+			width: 280px;
+		}
+
+		&__ui {
+			&-title {
+				gap: 20px 24px;
+
+				.download-button svg,
+				.like-button svg {
+					height: 30px;
+				}
+
+				&-name {
+					margin-bottom: 30px;
+
+					&-song {
+						font-size: 35px;
+					}
+				}
+			}
+
+			&-control-buttons {
+				.shuffle-button svg {
+					height: 22px;
+				}
+
+				.previous-button svg,
+				.next-button svg {
+					height: 28px;
+				}
+
+				.play-pause-button svg {
+					height: 75px;
+				}
+
+				.loop-button svg {
+					height: 21px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 950px) {
+		align-items: center;
+
+		&__cover {
+			width: 230px;
+		}
+
+		&__ui {
+			&-title {
+				gap: 14px 18px;
+
+				.download-button svg,
+				.like-button svg {
+					height: 24px;
+				}
+
+				&-name {
+					margin-bottom: 30px;
+
+					&-song {
+						font-size: 30px;
+					}
+
+					&-author {
+						font-size: 16px;
+					}
+				}
+			}
+
+			&-control-buttons {
+				.shuffle-button svg {
+					height: 18px;
+				}
+
+				.previous-button svg,
+				.next-button svg {
+					height: 24px;
+				}
+
+				.play-pause-button svg {
+					height: 60px;
+				}
+
+				.loop-button svg {
+					height: 17px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 800px) {
+		flex-direction: column;
+		gap: 28px;
+		padding-block: 42px 56px;
+
+		&__ui {
+			width: 100%;
+
+			&-title {
+				gap: 30px;
+				flex-wrap: nowrap;
+				justify-content: center;
+				margin-bottom: 28px;
+				width: 100%;
+				max-width: 400px;
+				margin-inline: auto;
+
+				.like-button {
+					order: 1;
+				}
+				
+				&-name {
+					max-width: 80%;
+					margin-bottom: 0;
+
+					&-song {
+						text-align: center;
+						margin-bottom: 5px;
+					}
+
+					&-author {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+
+	@media (max-width: 520px) {
+		&__ui {
+			&-title {
+				gap: 25px;
+
+				&-name {
+					max-width: 78%;
+					&-song {
+						font-size: 20px;
+					}
+				}
+			}
+
+			&-control-buttons {
+				padding-inline: 0;
+			}
+		}
+	}
+}
+
+
+
+.player-mini {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	width: 100%;
+	z-index: 100;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 37px;
+	padding-block: 24px;
+	background-color: var(--color-bg-main);
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: var(--color-devider);
+	transform: translate(-50%, -100%);
+	transition-property: transform;
+	transition-duration: var(--transition-duration);
+
+	&.active {
+		transform: translate(-50%, 0);
+	}
+
+	&__cover {
+		flex: none;
+		width: 86px;
+		aspect-ratio: 1 / 1;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		border-radius: 12px;
+		transition: background-image;
+		transition-duration: var(--transition-duration);
+	}
+
+	&__ui {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		&-title {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 16px;
+
+			.download-button svg,
+			.like-button svg {
+				height: 26px;
+			}
+
+			&-name {
+				order: -1;
+
+				&-song {
+					width: 270px;
+					font-size: 28px;
+					margin-bottom: 4px;
+				}
+			}
+		}
+
+		&-control {
+			flex-grow: 1;
+			margin-left: 45px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 56px;
+
+			.timeline {
+				flex-grow: 1;
+				margin-top: 8px;
+			}
+
+			&-buttons {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 26px;
+
+				.shuffle-button {
+					order: 2;
+
+					svg {
+						height: 20px;
+					}
+				}
+
+				.previous-button svg,
+				.next-button svg {
+					height: 24px;
+				}
+
+				.play-pause-button svg {
+					height: 55px;
+				}
+
+				.loop-button {
+					order: 3;
+
+					svg {
+						height: 21px;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1340px) {
+		&__ui {
+			&-title {
+				.download-button,
+				.like-button {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1240px) {
+		&__ui {
+			&-control {
+				&-buttons {
+					.shuffle-button,
+					.loop-button {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1140px) {
+		gap: 24px;
+
+		&__cover {
+			width: 64px;
+		}
+
+		&__ui {
+			&-title {
+				&-name {
+					&-song {
+						width: 220px;
+						font-size: 22px;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 950px) {
+		&__ui {
+			&-title {
+				&-name {
+					&-song {
+						width: 180px;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 860px) {
+		&__ui {
+			&-title {
+				&-name {
+					&-song {
+						width: 160px;
+					}
+				}
+			}
+
+			&-control {
+				margin-left: 24px;
+				gap: 32px;
+
+				&-buttons {
+					gap: 20px;
+
+					.previous-button svg,
+					.next-button svg {
+						height: 18px;
+					}
+
+					.play-pause-button svg {
+						height: 48px;
+					}
+				}
+			}
+		}
+	}
+
+	@include media.screen-medium {
+		gap: 18px;
+
+		&__cover {
+			width: 48px;
+			border-radius: 8px;
+		}
+
+		&__ui {
+			&-title {
+				&-name {
+					&-song {
+						font-size: 20px;
+						width: 160px;
+						margin-bottom: 2px;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 700px) {
+		&__ui {
+			&-title {
+				&-name {
+					&-song {
+						width: 200px;
+					}
+				}
+			}
+
+			&-control {
+				.timeline {
+					display: none;
+				}
+
+				&-buttons {
+					flex: 1;
+					justify-content: end;
+					gap: 24px;
+
+					.shuffle-button,
+					.loop-button {
+						display: block;
+						
+						svg {
+							height: 16px;
+						}
+					}
+
+					.shuffle-button {
+						order: 0;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		&__ui {
+			&-control {
+				&-buttons {
+					gap: 20px;
+
+					.shuffle-button,
+					.loop-button {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 500px) {
+		&__ui {
+			&-title {
+				&-name {
+					&-song {
+						width: 160px;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 460px) {
+		padding-block: 18px;
+
+		&__ui {
+			&-title {
+				&-name {
+					&-song {
+						width: 140px;
+					}
+				}
+			}
+
+			&-control {
+				margin-left: 24px;
+				gap: 32px;
+
+				&-buttons {
+					gap: 16px;
+
+					.previous-button svg,
+					.next-button svg {
+						height: 18px;
+					}
+
+					.play-pause-button svg {
+						height: 36px;
+					}
+				}
+			}
+		}
+	}
+}

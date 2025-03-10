@@ -1,0 +1,60 @@
+@use "media.scss";
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.h2 {
+	color: var(--color-text-main);
+	font-family: 'PT Sans', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 56px;
+	line-height: 120%;
+
+	@media (max-width: 1260px) {
+		font-size: 42px;
+	}
+
+	@include media.screen-medium {
+		font-size: 20px;
+	}
+}
+
+.h3 {
+	color: var(--color-text-accent);
+	font-family: 'Bebas Neue', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 120%;
+
+	@include media.screen-medium {
+		font-size: 16px;
+	}
+}
+
+.p-medium {
+	color: var(--color-text-main);
+	font-family: 'PT Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+
+	&.bold {
+		font-weight: 700;
+	}
+
+	@include media.screen-medium {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+.p-small {
+	color: var(--color-text-main);
+	font-family: 'PT Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+}

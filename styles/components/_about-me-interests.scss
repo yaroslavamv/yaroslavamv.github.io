@@ -1,0 +1,147 @@
+@use "../media";
+
+.about-me-interests {
+	display: flex;
+	flex-direction: row;
+	gap: 104px;
+	margin-bottom: 90px;
+
+	@include media.screen-medium {
+		margin-bottom: 70px;
+	}
+
+	@media (max-width: 950px) {
+		flex-direction: column;
+		gap: 70px;
+	}
+}
+
+.about-me {
+	max-width: 665px;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+		gap: 24px;
+
+		&-line-numbers {
+			width: 11px;
+			flex: none;
+			position: relative;
+			overflow: hidden;
+
+			div {
+				position: absolute;
+			}
+		}
+
+		&-text-wrapper {
+			display: flex;
+			flex-direction: row;
+			overflow-x: hidden;
+		}
+
+		&-text {
+			flex: none;
+			width: 100%;
+			padding-bottom: 22px;
+
+			&.placeholder {
+				visibility: hidden;
+			}
+
+			&-cursor {
+				user-select: none;
+				
+				&.blink {
+					animation: cursor-blinking 2s ease infinite;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1090px) {
+		&__content {
+			&-line-numbers {
+				text-align: right;
+				width: 22px;
+			}
+		}
+	}
+
+	@include media.screen-medium {
+		&__content {
+			gap: 16px;
+
+			&-line-numbers {
+				width: 20px;
+			}
+		}
+	}
+}
+
+@keyframes cursor-blinking {
+	from {
+		opacity: 1;
+	}
+
+	25%,
+	50% {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+
+.interests {
+	min-width: 180px;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__list {
+		max-width: 404px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+
+	&__item {
+		width: 48px;
+		height: 48px;
+		border: 1px solid var(--color-text-main);
+		border-radius: 24px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+
+		svg path {
+			fill: var(--color-text-main);
+		}
+
+		&.music {
+			padding-bottom: 3px;
+		}
+
+		&.cooking {
+			padding-top: 1px;
+		}
+	}
+
+	@media (max-width: 950px) {
+		&__list {
+			max-width: none;
+		}
+	}
+}

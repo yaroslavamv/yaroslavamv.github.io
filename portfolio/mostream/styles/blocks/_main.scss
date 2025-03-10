@@ -1,0 +1,15 @@
+.main {
+	&__title {
+		max-width: 788px;
+		text-align: center;
+		margin-inline: auto;
+		margin-bottom: 56px;
+	}
+
+	@media (max-width: 980px) {
+		&__title {
+			max-width: 400px;
+			margin-bottom: 32px;
+		}
+	}
+}

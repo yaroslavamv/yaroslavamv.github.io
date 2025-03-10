@@ -1,0 +1,43 @@
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 24px;
+	padding-block: 24px;
+
+	&__menu {
+		&-list {
+			display: flex;
+			flex-direction: row;
+			gap: 24px;
+		}
+	}
+
+	&__burger-button {
+		display: none;
+	}
+
+	@media (max-width: 760px) {
+		&__menu {
+			&-list {
+				display: none;
+			}
+		}
+
+		&__burger-button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 36px;
+			aspect-ratio: 1 / 1;
+			border: 1px solid var(--color-text-main);
+			border-radius: 8px;
+			cursor: pointer;
+
+			svg path {
+				fill: var(--color-text-main);
+			}
+		}
+	}
+}
