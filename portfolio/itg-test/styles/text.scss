@@ -1,0 +1,47 @@
+@use "media";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.p-main {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: var(--color-text-main);
+
+	&.bold {
+		font-weight: 600;
+	}
+}
+
+.h-medium {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	color: var(--color-text-main);
+
+	@include media.screen-small {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+.h-large {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 32px;
+	color: var(--color-text-main);
+
+	@include media.screen-small {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}

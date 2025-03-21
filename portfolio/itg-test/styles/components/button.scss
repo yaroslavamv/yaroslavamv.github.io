@@ -1,0 +1,39 @@
+.button {
+	width: 32px;
+	height: 32px;
+	border: 1px solid var(--color-border);
+	border-radius: var(--border-radius);
+	background-position: center;
+	background-repeat: no-repeat;
+
+	&.primary {
+		background: var(--color-accent);
+		border: none;
+		color: white;
+	}
+
+	&.text {
+		width: auto;
+		padding-inline: 12px;
+	}
+
+	&.settings {
+		background-image: url("../media/icons/icon-button-settings.svg");
+	}
+
+	&.unpin {
+		background-image: url("../media/icons/icon-button-unpin.svg");
+	}
+
+	&.search {
+		background-image: url("../media/icons/icon-button-search.svg");
+	}
+
+	&.add {
+		background-image: url("../media/icons/icon-button-add.svg");
+	}
+
+	&.date {
+		background-image: url("../media/icons/icon-button-date.svg");
+	}
+}

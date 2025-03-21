@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>Yaroslav Adamov | ITG test</title>
+		<meta name="author" content="Ярослав Адамов">
+		<link rel="stylesheet" href="styles/styles.css">
+	</head>
+
+	<body>
+
+		<header class="header">
+			<button class="header__button-side-menu">
+				<svg height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 5C4 4.44772 4.44772 4 5 4H8V20H5C4.44772 20 4 19.5523 4 19V5ZM10 20V4H19C19.5523 4 20 4.44772 20 5V19C20 19.5523 19.5523 20 19 20H10Z" fill="#2E3238"/>
+				</svg>
+			</button>
+			<a href="" class="header__logo"></a>
+			<div class="header__menu">
+				<input type="search" placeholder="Поиск" class="header__menu-search input-search search p-main">
+				<div class="header__menu-user">
+					<button class="header__menu-user-avatar"></button>
+					<span class="header__menu-user-name p-main">Максим Галактионов</span>
+				</div>
+				<button class="header__menu-button button settings"></button>
+			</div>
+		</header>
+
+		<main class="main">
+
+			<div class="main__navigator">
+
+				<ul class="main__navigator-tabs">
+					<li class="main__navigator-tabs-item">
+						<button class="main__navigator-tabs-item side-menu is-active">
+							<svg height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 5C4 4.44772 4.44772 4 5 4H8V20H5C4.44772 20 4 19.5523 4 19V5ZM10 20V4H19C19.5523 4 20 4.44772 20 5V19C20 19.5523 19.5523 20 19 20H10Z" fill="#2E3238"/>
+							</svg>
+						</button>
+					</li>
+					<li class="main__navigator-tabs-item">
+						<button class="main__navigator-tabs-item fav">
+							<svg height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C12.3806 1 12.7282 1.21607 12.8967 1.55738L15.7543 7.34647L22.1446 8.28051C22.5212 8.33555 22.8339 8.59956 22.9512 8.96157C23.0686 9.32357 22.9703 9.72083 22.6977 9.98636L18.0745 14.4894L19.1656 20.851C19.23 21.2261 19.0757 21.6053 18.7677 21.8291C18.4598 22.0528 18.0515 22.0823 17.7145 21.9051L12 18.8998L6.28545 21.9051C5.94853 22.0823 5.54024 22.0528 5.23226 21.8291C4.92429 21.6053 4.77004 21.2261 4.83439 20.851L5.92548 14.4894L1.30227 9.98636C1.02965 9.72083 0.931375 9.32357 1.04875 8.96157C1.16613 8.59956 1.47881 8.33555 1.85537 8.28051L8.24574 7.34647L11.1033 1.55738C11.2718 1.21607 11.6194 1 12 1ZM12 4.25925L9.80671 8.70262C9.66117 8.99747 9.37998 9.20193 9.05463 9.24949L4.14841 9.9666L7.69773 13.4236C7.93361 13.6534 8.04127 13.9845 7.98561 14.309L7.14818 19.1917L11.5345 16.8849C11.8259 16.7317 12.1741 16.7317 12.4655 16.8849L16.8518 19.1917L16.0144 14.309C15.9587 13.9845 16.0664 13.6534 16.3023 13.4236L19.8516 9.9666L14.9454 9.24949C14.62 9.20193 14.3388 8.99747 14.1933 8.70262L12 4.25925Z" fill="#2E3238"/>
+							</svg>
+						</button>
+					</li>
+				</ul>
+
+				<div class="main__navigator-content">
+
+					<div class="main__navigator-content-filter">
+						<input type="search" placeholder="Поиск по меню" class="main__navigator-content-filter-search input-search filter p-main">
+						<button class="main__navigator-content-filter-button button unpin"></button>
+					</div>
+
+					<ul class="main__navigator-content-list">
+						<li class="main__navigator-content-item p-main">Моя работа</li>
+						<li class="main__navigator-content-item p-main">Структура портала</li>
+						<li class="main__navigator-content-item p-main">Личное расписание</li>
+						<li class="main__navigator-content-item p-main">Отсутствие на рабочем месте</li>
+						<li class="main__navigator-content-item p-main">Портфель услуг</li>
+						<li class="main__navigator-content-item p-main">Дашборды</li>
+						<li class="main__navigator-content-item p-main">Доски задач</li>
+						<li class="main__navigator-content-item p-main">Обращения</li>
+						<li class="main__navigator-content-item p-main">События</li>
+						<li class="main__navigator-content-item p-main">Инциденты</li>
+						<li class="main__navigator-content-item p-main">Проблемы</li>
+						<li class="main__navigator-content-item p-main">Настройка каталогов</li>
+						<li class="main__navigator-content-item p-main">Запросы на обслуживание</li>
+						<li class="main__navigator-content-item p-main">Запросы на изменение</li>
+						<li class="main__navigator-content-item p-main">Управление конфигурациями</li>
+						<li class="main__navigator-content-item p-main">Управление уровнем услуг</li>
+						<li class="main__navigator-content-item p-main">Настройка соответствий</li>
+					</ul>
+
+				</div>
+				
+			</div>
+
+			<div class="main__content">
+
+				<div class="main__content-header">
+					<div class="main__content-header-left">
+						<span class="main__content-header-left-title h-medium">Подзадача</span>
+						<button class="button text p-main bold">Создать</button>
+					</div>
+					<div class="main__content-header-right">
+						<button class="button text p-main bold primary">Сохранить</button>
+						<button class="button text p-main bold">Сохранить и выйти</button>
+					</div>
+				</div>
+
+				<p class="main__content-title h-large">STSK0004783 На инциденте, запросе, проблеме, в статусе закрыто некоторые поля остаются редактируемыми для агента если он Caller</p>
+
+				<form action="" class="main__content-form">
+
+					<div class="main__content-form-group">
+						<div class="main__content-form-item">
+							<p class="main__content-form-item-title required p-main bold">Тема</p>
+							<input type="text" class="main__content-form-item-input p-main" value="На инциденте, запросе, проблеме, в статусе закрыто некоторые поля остаются редактируемыми для агента если он Caller">
+						</div>
+						<div class="main__content-form-item">
+							<p class="main__content-form-item-title p-main bold">Статус</p>
+							<input type="text" class="main__content-form-item-input p-main" value="Новая">
+						</div>
+					</div>
+
+					<div class="main__content-form-group">
+						<div class="main__content-form-item">
+							<p class="main__content-form-item-title p-main bold">Описание</p>
+							<input type="text" class="main__content-form-item-input p-main">
+						</div>
+						<div class="main__content-form-item">
+							<p class="main__content-form-item-title p-main bold">Продукт</p>
+							<div class="main__content-form-item-content">
+								<input type="text" class="main__content-form-item-input p-main" value="Platform">
+								<button class="button search"></button>
+							</div>
+						</div>
+					</div>
+
+					<div class="main__content-form-group">
+						<div class="main__content-form-item">
+							<p class="main__content-form-item-title required p-main bold">Рабочие заметки</p>
+							<input type="text" class="main__content-form-item-input p-main" value="Проверить ACL id=172830402014193655">
+						</div>
+						<div class="main__content-form-item">
+							<p class="main__content-form-item-title p-main bold">Приоритет</p>
+							<input type="text" class="main__content-form-item-input p-main" value="Средний">
+						</div>
+					</div>
+
+					<div class="main__content-form-group">
+						<div class="main__content-form-item">
+							<p class="main__content-form-item-title p-main bold">Ответственный</p>
+							<div class="main__content-form-item-content">
+								<div class="main__content-form-item-list-wrapper">
+									<ul class="main__content-form-item-list p-main">
+										<li class="main__content-form-item-list-badge"><span>Константин Константинопольский</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									</ul>
+									<button class="main__content-form-item-list-button-clear"></button>
+								</div>
+								<button class="button add"></button>
+								<button class="button search"></button>
+							</div>
+						</div>
+						<div class="main__content-form-item">
+							<p class="main__content-form-item-title p-main bold">Группа</p>
+							<div class="main__content-form-item-content">
+								<div class="main__content-form-item-list-wrapper">
+									<ul class="main__content-form-item-list p-main">
+										<li class="main__content-form-item-list-badge"><span>Support Group</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									</ul>
+									<button class="main__content-form-item-list-button-clear"></button>
+								</div>
+								<button class="button add"></button>
+								<button class="button search"></button>
+							</div>
+						</div>
+					</div>
+
+					<div class="main__content-form-item">
+						<p class="main__content-form-item-title p-main bold">Комментарии</p>
+						<input type="text" class="main__content-form-item-input p-main">
+					</div>
+
+					<div class="main__content-form-item">
+						<p class="main__content-form-item-title p-main bold">Согласующие</p>
+						<div class="main__content-form-item-content">
+							<div class="main__content-form-item-list-wrapper">
+								<ul class="main__content-form-item-list p-main">
+									<li class="main__content-form-item-list-badge"><span>Андрей Пивоваров</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									<li class="main__content-form-item-list-badge"><span>Максим Галактионов</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									<li class="main__content-form-item-list-badge"><span>Алла Лин</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									<li class="main__content-form-item-list-badge"><span>Константин Константинопольский Константинович</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									<li class="main__content-form-item-list-badge"><span>Игорь Иванченко</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									<li class="main__content-form-item-list-badge"><span>Юлия Эйчаровна</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									<li class="main__content-form-item-list-badge"><span>Артём Подпрыгайко-Саппортов</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									<li class="main__content-form-item-list-badge"><span>Илья Вазнец</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									<li class="main__content-form-item-list-badge"><span>Михаил Вортенов</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									<li class="main__content-form-item-list-badge"><span>Наталья Нашевна</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									<li class="main__content-form-item-list-badge"><span>Евгения Итамовна</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									<li class="main__content-form-item-list-badge"><span>Алиса Киральчук</span><button class="main__content-form-item-list-badge-delete"></button></li>
+								</ul>
+								<button class="main__content-form-item-list-button-clear"></button>
+							</div>
+							<button class="button add"></button>
+							<button class="button search"></button>
+						</div>
+					</div>
+
+					<div class="main__content-form-group">
+						<div class="main__content-form-item">
+							<p class="main__content-form-item-title p-main bold">Когда открыта</p>
+							<div class="main__content-form-item-content">
+								<input type="date" class="main__content-form-item-input p-main">
+								<button class="button date"></button>
+							</div>
+						</div>
+						<div class="main__content-form-item">
+							<p class="main__content-form-item-title p-main bold">Когда создано</p>
+							<div class="main__content-form-item-content">
+								<input type="date" class="main__content-form-item-input p-main" value="2024-10-22">
+								<button class="button date"></button>
+							</div>
+						</div>
+					</div>
+
+					<div class="main__content-form-group">
+						<div class="main__content-form-item">
+							<p class="main__content-form-item-title p-main bold">Кем открыто</p>
+							<div class="main__content-form-item-content">
+								<div class="main__content-form-item-list-wrapper">
+									<ul class="main__content-form-item-list p-main">
+										<li class="main__content-form-item-list-badge"><span>Андрей Пивоваров</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									</ul>
+									<button class="main__content-form-item-list-button-clear"></button>
+								</div>
+								<button class="button add"></button>
+								<button class="button search"></button>
+							</div>
+						</div>
+						<div class="main__content-form-item">
+							<p class="main__content-form-item-title p-main bold">Кем создано</p>
+							<div class="main__content-form-item-content">
+								<div class="main__content-form-item-list-wrapper">
+									<ul class="main__content-form-item-list p-main">
+										<li class="main__content-form-item-list-badge"><span>Андрей Пивоваров</span><button class="main__content-form-item-list-badge-delete"></button></li>
+									</ul>
+									<button class="main__content-form-item-list-button-clear"></button>
+								</div>
+								<button class="button add"></button>
+								<button class="button search"></button>
+							</div>
+						</div>
+					</div>
+				</form>
+
+			</div>
+
+		</main>
+
+		<script src="scripts/index.js"></script>
+	</body>
+</html>

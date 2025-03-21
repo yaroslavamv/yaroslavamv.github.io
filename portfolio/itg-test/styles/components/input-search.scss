@@ -1,0 +1,25 @@
+.input-search {
+	height: 32px;
+	padding: 6px 24px 6px 8px;
+	background: var(--color-background-accent);
+	border: 1px solid var(--color-border);
+	border-radius: var(--border-radius);
+	background-position: calc(100% - 6px);
+	background-repeat: no-repeat;
+
+	&::placeholder {
+		color: var(--color-text-placeholder);
+	}
+
+	&::-webkit-search-cancel-button {
+		display: none;
+	}
+	
+	&.search {
+		background-image: url("../media/icons/icon-search.svg");
+	}
+
+	&.filter {
+		background-image: url("../media/icons/icon-filter.svg");
+	}
+}

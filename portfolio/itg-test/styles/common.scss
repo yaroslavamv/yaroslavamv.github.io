@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+}
+
+ol,
+ul {
+	list-style-type: none;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	line-height: 0;
+}

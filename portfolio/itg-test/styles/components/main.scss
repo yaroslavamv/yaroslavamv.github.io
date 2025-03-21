@@ -1,0 +1,270 @@
+@use "../media";
+
+
+.main {
+	display: flex;
+	flex-direction: row;
+	min-height: 150vh;
+
+	&__navigator {
+		display: flex;
+		flex-direction: row;
+
+		&-tabs {
+			display: flex;
+			flex-direction: column;
+			gap: 32px;
+			padding: 16px;
+			border-right: 1px solid var(--color-border);
+
+			&-item {
+				&.is-active {
+					svg path {
+						fill: var(--color-accent);
+					}
+				}
+			}
+		}
+
+		&-content {
+			width: 280px;
+			display: flex;
+			flex-direction: column;
+			border-right: 1px solid var(--color-border);
+
+			&-filter {
+				display: flex;
+				flex-direction: row;
+				gap: 8px;
+				padding: 16px;
+				border-bottom: 1px solid var(--color-border);
+
+				&-search {
+					flex-grow: 1;
+				}
+			}
+
+			&-list {
+				padding: 10px 16px;
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+				background-color: var(--color-background-accent);
+			}
+
+			&-item {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 8px;
+
+				&::before {
+					content: url(../../media/icons/list-marker.svg);
+					line-height: 0;
+				}
+			}
+		}
+	}
+
+
+	&__content {
+		flex-grow: 1;
+		min-width: 0;
+
+		&-header {
+			position: sticky;
+			top: 0;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 16px;
+			background-color: white;
+			transition: box-shadow .2s;
+
+			&.scrolled {
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+			}
+
+			&-left {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 16px;
+			}
+
+			&-right {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 4px;
+			}
+		}
+
+		&-title {
+			padding-inline: 16px;
+			margin-bottom: 24px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		&-form {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			padding-inline: 16px;
+
+			&-group {
+				display: flex;
+				flex-direction: row;
+				gap: 16px;
+			}
+
+			&-item {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: stretch;
+				gap: 8px;
+
+				&-title {
+					&.required {
+						&::before {
+							content: "* ";
+							color: var(--color-danger);
+						}
+					}
+				}
+
+				&-content {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: start;
+					gap: 4px;
+
+					.button {
+						flex: none;
+					}
+				}
+
+				&-input {
+					flex-grow: 1;
+					height: 32px;
+					padding: 6px 8px;
+					background: var(--color-background-accent);
+					border: 1px solid var(--color-border);
+					border-radius: var(--border-radius);
+
+					&::-webkit-inner-spin-button,
+					&::-webkit-calendar-picker-indicator {
+						display: none;
+						-webkit-appearance: none;
+					}
+				}
+
+				&-list {
+					overflow: hidden;
+					flex-grow: 1;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					align-items: flex-start;
+					align-content: flex-start;
+					gap: 4px;
+
+					&-wrapper {
+						overflow: hidden;
+						flex-grow: 1;
+						display: flex;
+						flex-direction: row;
+						gap: 6px;
+						padding: 4px 8px 4px 4px;
+						background: var(--color-background-accent);
+						border: 1px solid var(--color-border);
+						border-radius: var(--border-radius);
+					}
+
+					&-badge {
+						flex: none;
+						max-width: 100%;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						padding-inline: 8px;
+						gap: 8px;
+						background: var(--color-badge-background);
+						border: 1px solid var(--color-badge-border);
+						border-radius: var(--border-radius);
+						
+						span {
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+						}
+
+						&-delete {
+							flex: none;
+							width: 16px;
+							height: 16px;
+							background-image: url("../media/icons/icon-badge-delete.svg");
+							background-position: center;
+							background-repeat: no-repeat;
+						}
+					}
+
+					&-button-clear {
+						flex: none;
+						margin-top: 3px;
+						width: 16px;
+						height: 16px;
+						background-image: url("../media/icons/icon-form-list-clear.svg");
+						background-size: contain;
+						background-repeat: no-repeat;
+					}
+				}
+			}
+		}
+	}
+
+
+	@include media.screen-medium {
+		&__navigator {
+			&-content {
+				display: none;
+			}
+		}
+
+		&__content {
+			&-form {
+				&-group {
+					flex-direction: column;
+				}
+			}
+		}
+	}
+
+
+	@include media.screen-small {
+		&__navigator {
+			display: none;
+		}
+
+		&__content {
+			&-header {
+				&-left {
+					justify-content: space-between;
+					width: 100%;
+
+					&-title {
+						text-transform: uppercase;
+					}
+				}
+
+				&-right {
+					display: none;
+				}
+			}
+		}
+	}
+}
