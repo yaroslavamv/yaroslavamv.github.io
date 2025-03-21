@@ -185,7 +185,7 @@ button {
   gap: 8px;
 }
 .main__navigator-content-item::before {
-  content: url(../../media/icons/list-marker.svg);
+  content: url("../media/icons/list-marker.svg");
   line-height: 0;
 }
 .main__content {
